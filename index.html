@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load static %}
+<script>
+function p (value) {
+  alert(value);
+}
+
+</script>
+
+{% block content %}
+
+
+<div class="jumbotron text-center">
+  <div class="container">
+    <a href="/" class="lang-logo">
+      <img src="{% static 'lang-logo.png'%}">
+    </a>
+     </div>
+</div>
+<div class="container">
+ 
+  <div class="row">
+    <div class="col-md-4">
+      <label for="primeros" class="form-label">Primeros</label>
+      <textarea class="form-control" id="primeros" rows="3" disabled></textarea>
+    </div>
+    <div class="col-md-4">
+      <label for="Siguientes" class="form-label">Siguientes</label>
+      <textarea class="form-control" id="siguientes" rows="3" disabled></textarea>
+    </div>
+    <div class="col-md-4">
+      <form action="/load-grammar">
+        <label for="gramatica" class="form-label">Gramatica</label>
+        <textarea class="form-control" id="gramatica" rows="3"></textarea>
+        <div class="col-md-offset-8">
+          <input class="btn btn-primary"  type="submit" >
+        </div>
+        
+      </form>
+
+
+    </div>
+
+  </div>
+
+
+  <div class="row">
+    <label for="cp" class="form-label">Conjunto Predicción</label>
+      <textarea class="form-control" id="cp" rows="3" disabled></textarea>
+  </div>
+</div>
+
+</div>
+{% endblock %}
